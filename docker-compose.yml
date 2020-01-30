@@ -9,7 +9,7 @@ services:
     environment:
       - MYSQL_DATABASE=wordpress
     volumes: 
-      - ./dbdata:/var/lib/mysql
+      - dbdata:/var/lib/mysql
     command: '--default-authentication-plugin=mysql_native_password'
     networks:
       - app-network
@@ -72,6 +72,7 @@ volumes:
   certbot-etc:
   wordpress:
   dbdata:
+  site-data:
 
 networks:
   app-network:
